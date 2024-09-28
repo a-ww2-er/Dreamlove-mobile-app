@@ -1,0 +1,19 @@
+{
+  "name": "dreamlover-server",
+  "version": "1.0.0",
+  "description": "dating app server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-ww2-er/Dreamlove.git"
+  },
+  "author": "a-ww2-er",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-ww2-er/Dreamlove/issues"
+  },
+  "homepage": "https://github.com/a-ww2-er/Dreamlove#readme"
+}
