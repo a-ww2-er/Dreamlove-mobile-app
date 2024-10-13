@@ -10,20 +10,24 @@ import { LinearGradient } from "expo-linear-gradient";
 // import { styles } from "@/styles/welcome/onboard";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { router } from "expo-router";
+import Constants from "@/constants/constants";
 
 const WelcomeScreen = () => {
   //  padding:10
   return (
     <LinearGradient
-      colors={["#F7DAF9","#F7DAF9"]}
+      colors={["#E7BBF0", "#F9F8FC", "#FFFDFF", "#F9E7F9", "#E7BBF0"]}
+      start={{ x: 0, y: 1 }} 
+      end={{ x: 1, y: 0 }} 
+      locations={[0, 0.45, 0.55, 0.8,1]}
       style={{
         flex: 1,
-    padding: 12,
-justifyContent:"flex-end"
+        padding: 12,
+        justifyContent: "flex-end",
       }}
     >
       <View style={styles.firstContainer}>
-        {/* <Image source={require("@/assets/logo1.jpg")} style={styles.image} /> */}
+        <Image source={require("@/assets/images/welcome-img.png")}  />
         {/* <Image source={require("")}
           /> */}
         <View style={styles.titleContainer}>
@@ -48,19 +52,19 @@ justifyContent:"flex-end"
       </View>
       <View>
         <TouchableOpacity
-          // onPress={()=>router.push("/(routes)/welcome")}
+           onPress={()=>router.push("/(routes)/auth/login")}
           style={[styles.buttonContainer,{backgroundColor:"#8912C4"}]}
         >
           <Text style={[styles.buttonText,{color:"white"}]}>Login</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          // onPress={()=>router.push("/(routes)/welcome")}
+          onPress={()=>router.push("/(routes)/auth/signup")}
           style={styles.buttonContainer}
         >
-          <Text style={[styles.buttonText]}>Register</Text>
+          <Text style={[styles.buttonText]}>Sign up</Text>
         </TouchableOpacity>
       </View>
-      <Text style={{textAlign:"center"}}>Flirt , chat and meet people around you</Text>
+      <Text style={{textAlign:"center",fontWeight:300,marginBottom:Constants.margins.bottom}}>Flirt, chat and meet people around you</Text>
     </LinearGradient>
   );
 };
@@ -91,7 +95,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 15,
     textAlign: "center",
-    backgroundColor: "white", // Example background color
+    backgroundColor: "white", 
     width: "100%",
     marginBottom:15,
     borderRadius: 50,

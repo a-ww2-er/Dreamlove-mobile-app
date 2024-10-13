@@ -51,6 +51,8 @@ function RootLayoutNav() {
     <Stack screenOptions={{ headerShown: false }}>
       <Stack.Screen name="(routes)/onBoarding/index" />
       <Stack.Screen name="(routes)/welcome/index" />
+      <Stack.Screen name="(routes)/auth/login/index" />
+      <Stack.Screen name="(routes)/auth/signup/index" />
     </Stack>
   );
 }
